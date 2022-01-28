@@ -19,6 +19,7 @@ function createWindow () {
     win.addBrowserView(view2)
     //win.maximize();
     win.setResizable(false);
+    win.webContents.openDevTools()
 
     let [width, height] = win.getSize();
     console.log(`width: ${width}, height: ${height}`);

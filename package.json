@@ -13,6 +13,7 @@
     "electron": "^16.0.7"
   },
   "dependencies": {
-    "pageres": "^6.2.4"
+    "pageres": "^6.2.4",
+    "puppeteer": "^13.1.2"
   }
 }
