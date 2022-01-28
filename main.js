@@ -53,6 +53,7 @@ function createWindow (win, view1, view2) {
     win.addBrowserView(view2)
     //win.maximize();
     win.setResizable(false);
+    win.setMaximizable(maximizable)
     win.webContents.openDevTools()
 
     let [width, height] = win.getSize();
@@ -74,6 +75,7 @@ app.whenReady().then(() => {
         show: false,
         width: 1824,
         height: 984,
+        fullscreen: true, //disable on windows
         backgroundColor: '#223b61',
         webPreferences: {
             preload: path.join(__dirname, 'preload.js')
