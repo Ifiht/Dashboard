@@ -52,9 +52,7 @@ function createWindow (win, view1, view2) {
     win.addBrowserView(view1)
     win.addBrowserView(view2)
     //win.maximize();
-    win.setResizable(false);
-    win.setMaximizable(maximizable)
-    win.webContents.openDevTools()
+    //win.setResizable(false);
 
     let [width, height] = win.getSize();
     console.log(`width: ${width}, height: ${height}`);
