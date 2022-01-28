@@ -13,6 +13,8 @@
     "electron": "^16.0.7"
   },
   "dependencies": {
+    "chokidar": "^3.5.3",
+    "electron-reload": "^2.0.0-alpha.1",
     "pageres": "^6.2.4",
     "puppeteer": "^13.1.2"
   }
