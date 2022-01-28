@@ -5,8 +5,8 @@ const wx_url = 'https://www.msn.com/en-us/weather/forecast/in-Cupertino,CA?ocid=
 function createWindow () {
     const win = new BrowserWindow({
         show: false,
-        width: 800,
-        height: 600,
+        width: 1824,
+        height: 984,
         webPreferences: {
             preload: path.join(__dirname, 'preload.js')
         }
@@ -17,22 +17,23 @@ function createWindow () {
 
     win.addBrowserView(view1)
     win.addBrowserView(view2)
-    win.maximize();
+    //win.maximize();
     win.setResizable(false);
 
     let [width, height] = win.getSize();
+    console.log(`width: ${width}, height: ${height}`);
     var hafwidth = width / 2;
 
     view1.setBounds({ x: 0, y: 0, width: hafwidth, height: height })
-    view1.webContents.loadURL(wx_url)
+    view1.webContents.loadURL(`file://${__dirname}/index.html`)
+    view1.setBackgroundColor("#ff223b61")
     view1.setAutoResize({width:true, height:true})
     view2.setBounds({ x: hafwidth, y: 0, width: hafwidth, height: height })
-    view2.webContents.loadURL('https://www.msn.com/en-us/money')
+    view2.webContents.loadURL('https://app.dataminr.com/app/dashboard.html')
     view2.setAutoResize({width:true, height:true})
 
     win.show();
 
-    //win.loadFile('https://www.msn.com/en-us/weather/forecast/in-Reston,VA?loc=eyJhIjoiMTE4MTMgQ29vcGVycyBDdCIsImwiOiJSZXN0b24iLCJyIjoiVkEiLCJyMiI6IkZhaXJmYXggQ291bnR5IiwiYyI6IlVuaXRlZCBTdGF0ZXMiLCJpIjoiVVMiLCJnIjoiZW4tdXMiLCJ4IjotNzcuMzU0ODgzLCJ5IjozOC45Mzc3Njh9&weadegreetype=C&ocid=msedgntp')
 }
 
 app.whenReady().then(() => {
