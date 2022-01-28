@@ -1,3 +1,31 @@
+/*%#+++++ HTML ELEMENTS +++++#%*/
+body {
+    background-color: #223b61;
+}
+table {
+    max-height:100%; 
+    max-width:100%
+}
 img {
+    max-height:100%; 
+    max-width:100%
+}
+td img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*%#+++++ CLASSES +++++++++++#%*/
+.weekly_wx {
     width: 100%;
+}
+.wiki_motd {
+    height: 590px;
+}
+/*%#+++++ OBJ IDs +++++++++++#%*/
+#column1 {
+    width: 50%;
+}
+#column2 {
+    width: 50%;
 }

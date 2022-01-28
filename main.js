@@ -23,13 +23,14 @@ function createWindow () {
 
     let [width, height] = win.getSize();
     console.log(`width: ${width}, height: ${height}`);
-    var hafwidth = width / 2;
+    var hafwidth = 914;
+    var leftover = width - hafwidth;
 
     view1.setBounds({ x: 0, y: 0, width: hafwidth, height: height })
     view1.webContents.loadURL(`file://${__dirname}/index.html`)
     view1.setBackgroundColor("#ff223b61")
     view1.setAutoResize({width:true, height:true})
-    view2.setBounds({ x: hafwidth, y: 0, width: hafwidth, height: height })
+    view2.setBounds({ x: hafwidth, y: 0, width: leftover, height: height })
     view2.webContents.loadURL('https://app.dataminr.com/app/dashboard.html')
     view2.setAutoResize({width:true, height:true})
 
