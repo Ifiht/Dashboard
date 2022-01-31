@@ -1,6 +1,7 @@
 /*%#+++++ HTML ELEMENTS +++++#%*/
 body {
     background-color: #223b61;
+    overflow-x: hidden;
 }
 table {
     max-height:100%; 
