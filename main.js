@@ -72,6 +72,8 @@ function createWindow (win, view1, view2) {
     win.show();
 }
 
+app.commandLine.appendSwitch("disable-gpu");
+
 app.whenReady().then(() => {
 
     const win = new BrowserWindow({
