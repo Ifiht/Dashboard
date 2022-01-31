@@ -76,6 +76,7 @@ app.whenReady().then(() => {
 
     const win = new BrowserWindow({
         show: false,
+        frame: false,
         width: 1824,
         height: 984,
         fullscreen: true, //disable on windows
