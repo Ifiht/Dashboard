@@ -53,10 +53,15 @@ function createWindow (win, view1, view2) {
     win.addBrowserView(view2)
     //win.maximize();
     //win.setResizable(false);
+    const { screen } = require('electron')
 
-    let [width, height] = win.getSize();
+    // Create a window that fills the screen's available work area.
+    const primaryDisplay = screen.getPrimaryDisplay()
+
+    const { width, height } = primaryDisplay.workAreaSize
+    //let [width, height] = win.getSize();
     console.log(`width: ${width}, height: ${height}`);
-    var hafwidth = 914;
+    var hafwidth = width / 2;
     var leftover = width - hafwidth;
 
     view1.setBounds({ x: 0, y: 0, width: hafwidth, height: height })
