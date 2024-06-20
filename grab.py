@@ -10,6 +10,6 @@ options.profile = firefox_profile
 browser = webdriver.Firefox(options=options, executable_path='/usr/local/bin/geckodriver')
 browser.get('http://selenium.dev/')
 
-browser.find_element_by_tag_name('body').screenshot('web_screenshot.png')
+browser.find_element_by_tag_name('body').screenshot('res/web_screenshot.png')
 
 browser.quit()
