@@ -1,4 +1,5 @@
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.firefox.firefox_profile import FirefoxProfile
 
@@ -10,6 +11,6 @@ options.profile = firefox_profile
 browser = webdriver.Firefox(options=options, executable_path='/usr/local/bin/geckodriver')
 browser.get('https://en.wikipedia.org/wiki/Main_Page')
 
-browser.find_element_by_tag_name('mp-itn').screenshot('res/wiki-itn.png')
+browser.find_element(By.ID, 'mp-itn').screenshot('res/wiki-itn.png')
 
 browser.quit()

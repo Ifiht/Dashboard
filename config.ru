@@ -1,6 +1,6 @@
 require 'rack'
 
-bind 'tcp://0.0.0.0:9292'
+#bind 'tcp://0.0.0.0:9292'
 
 app = Rack::Builder.new do
   use Rack::Static,
