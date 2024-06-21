@@ -7,6 +7,8 @@ from selenium.webdriver.firefox.firefox_profile import FirefoxProfile
 
 # Create temp profile
 firefox_profile = FirefoxProfile()
+with open('urls.json') as f:
+    urls = json.load(f)
 
 # Configure options
 options = Options()
@@ -27,13 +29,13 @@ time.sleep(0.5)
 browser.find_element(By.ID, 'mp-itn').screenshot('res/wiki-itn.png')
 browser.find_element(By.ID, 'mp-otd').screenshot('res/wiki-otd.png')
 # Weather - general & map
-browser.get('https://www.msn.com/en-us/weather/forecast/in-Cupertino,CA')
+browser.get(urls['msn-weather'])
 time.sleep(1)
 browser.find_element(By.CLASS_NAME, 'backgroundContainerCompact-DS-EntryPoint1-1').screenshot('res/wx-summary.png')
 browser.find_element(By.CLASS_NAME, 'hourlyToggleContent-DS-EntryPoint1-1').screenshot('res/wx-hourly.png')
 browser.find_element(By.ID, 'weatherMiniMapContainer').screenshot('res/wx-map.png')
 # Weather - pollen
-browser.get('https://www.msn.com/en-us/weather/pollen/in-Cupertino,CA')
+browser.get(urls['msn-pollen'])
 time.sleep(1)
 browser.find_element(By.CLASS_NAME, 'wPollenDailyDetailSummarySection-DS-EntryPoint1-3').screenshot('res/wx-pollen.png')
 # Weather - space
