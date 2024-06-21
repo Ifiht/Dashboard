@@ -1,4 +1,5 @@
 import time
+import json
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.options import Options
@@ -29,6 +30,7 @@ browser.find_element(By.ID, 'mp-otd').screenshot('res/wiki-otd.png')
 browser.get('https://www.msn.com/en-us/weather/forecast/in-Cupertino,CA')
 time.sleep(1)
 browser.find_element(By.CLASS_NAME, 'backgroundContainerCompact-DS-EntryPoint1-1').screenshot('res/wx-summary.png')
+browser.find_element(By.CLASS_NAME, 'hourlyToggleContent-DS-EntryPoint1-1').screenshot('res/wx-hourly.png')
 browser.find_element(By.ID, 'weatherMiniMapContainer').screenshot('res/wx-map.png')
 # Weather - pollen
 browser.get('https://www.msn.com/en-us/weather/pollen/in-Cupertino,CA')
