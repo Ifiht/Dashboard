@@ -41,8 +41,8 @@ browser.find_element(By.CLASS_NAME, 'wPollenDailyDetailSummarySection-DS-EntryPo
 # Weather - space
 browser.get('https://www.swpc.noaa.gov/')
 time.sleep(0.5)
-browser.find_element(By.ID, 'block-swx-noaa-scales-noaascales').screenshot('res/wiki-itn.png')
-browser.find_element(By.ID, 'block-swx-summary-swx-summary').screenshot('res/wiki-otd.png')
+browser.find_element(By.ID, 'block-swx-noaa-scales-noaascales').screenshot('res/swpc-scales.png')
+browser.find_element(By.ID, 'block-swx-summary-swx-summary').screenshot('res/swpc-sum.png')
 # Financials - WSJ
 browser.get('https://www.wsj.com/market-data')
 time.sleep(1)
