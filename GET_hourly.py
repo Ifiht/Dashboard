@@ -20,12 +20,12 @@ browser.get('https://en.wikipedia.org/wiki/Main_Page')
 browser.find_element(By.ID, 'mp-itn').screenshot('res/wiki-itn.png')
 browser.find_element(By.ID, 'mp-otd').screenshot('res/wiki-otd.png')
 # Weather - general & map
-browser.get('https://www.msn.com/en-us/weather/forecast/in-Cupertino,CA?ocid=msedgntp&loc=eyJsIjoiQ3VwZXJ0aW5vIiwiciI6IkNBIiwicjIiOiJTYW50YSBDbGFyYSBDb3VudHkiLCJjIjoiVW5pdGVkIFN0YXRlcyIsImkiOiJVUyIsInQiOjEwMiwiZyI6ImVuLXVzIiwieCI6Ii0xMjIuMDI5IiwieSI6IjM3LjMxOTMifQ%3D%3D&weadegreetype=C')
-browser.find_element(By.ID, 'WeatherOverviewCurrentSection').screenshot('res/wx-summary.png')
-browser.find_element(By.ID, 'WeatherMapMini-ScreenWidthServerWeather-c3').screenshot('res/wx-map.png')
+browser.get('https://www.wunderground.com/weather/us/ca/cupertino')
+browser.find_element(By.CLASS_NAME, 'city-conditions row collapse ng-star-inserted').screenshot('res/wx-summary.png')
+browser.find_element(By.CLASS_NAME, 'city-map-wrapper').screenshot('res/wx-map.png')
 # Weather - pollen
-browser.get('https://www.msn.com/en-us/weather/pollen/in-Cupertino,CA?loc=eyJsIjoiQ3VwZXJ0aW5vIiwiciI6IkNBIiwicjIiOiJTYW50YSBDbGFyYSBDb3VudHkiLCJjIjoiVW5pdGVkIFN0YXRlcyIsImkiOiJVUyIsInQiOjEwMiwiZyI6ImVuLXVzIiwieCI6Ii0xMjIuMDI5IiwieSI6IjM3LjMxOTMifQ%3D%3D&weadegreetype=C&ocid=msedgntp&cvid=7efc5b0263864686bc85a613e28a2e5d&day=1')
-browser.find_element(By.CLASS_NAME, 'wPollenDailyDetailSummarySection-DS-EntryPoint1-3').screenshot('res/wx-pollen.png')
+browser.get('https://www.wunderground.com/health/us/ca/cupertino')
+browser.find_element(By.ID, 'airqualityindex_section').screenshot('res/wx-pollen.png')
 
 
 browser.quit()
