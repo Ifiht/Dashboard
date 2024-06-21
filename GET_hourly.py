@@ -28,8 +28,8 @@ browser.get('https://www.msn.com/en-us/weather/forecast/in-Cupertino,CA')
 browser.find_element(By.CLASS_NAME, 'overallContainer-DS-EntryPoint1-1').screenshot('res/wx-summary.png')
 browser.find_element(By.ID, 'weatherMiniMapContainer').screenshot('res/wx-map.png')
 # Weather - pollen
-#browser.get('https://www.wunderground.com/health/us/ca/cupertino')
-#browser.find_element(By.ID, 'airqualityindex_section').screenshot('res/wx-pollen.png')
+browser.get('https://www.msn.com/en-us/weather/pollen/in-Cupertino,CA')
+browser.find_element(By.CLASS_NAME, 'wPollenDailyDetailSummarySection-DS-EntryPoint1-3').screenshot('res/wx-pollen.png')
 
 
 browser.quit()
