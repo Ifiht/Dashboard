@@ -34,6 +34,14 @@ browser.find_element(By.ID, 'weatherMiniMapContainer').screenshot('res/wx-map.pn
 browser.get('https://www.msn.com/en-us/weather/pollen/in-Cupertino,CA')
 time.sleep(1)
 browser.find_element(By.CLASS_NAME, 'wPollenDailyDetailSummarySection-DS-EntryPoint1-3').screenshot('res/wx-pollen.png')
-
+# Weather - space
+browser.get('https://www.swpc.noaa.gov/')
+time.sleep(0.5)
+browser.find_element(By.ID, 'block-swx-noaa-scales-noaascales').screenshot('res/wiki-itn.png')
+browser.find_element(By.ID, 'block-swx-summary-swx-summary').screenshot('res/wiki-otd.png')
+# Financials - WSJ
+browser.get('https://www.wsj.com/market-data')
+time.sleep(1)
+browser.find_element(By.CLASS_NAME, 'WSJTables--table--1QzSOCfq ').screenshot('res/fin-mkts.png')
 
 browser.quit()
