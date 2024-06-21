@@ -8,8 +8,8 @@ options.add_argument("--headless")
 #options.headless = True
 options.profile = firefox_profile
 browser = webdriver.Firefox(options=options, executable_path='/usr/local/bin/geckodriver')
-browser.get('http://selenium.dev/')
+browser.get('https://en.wikipedia.org/wiki/Main_Page')
 
-browser.find_element_by_tag_name('body').screenshot('res/web_screenshot.png')
+browser.find_element_by_tag_name('mp-itn').screenshot('res/wiki-itn.png')
 
 browser.quit()
