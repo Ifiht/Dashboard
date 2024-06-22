@@ -17,13 +17,13 @@ td img{
     margin-right: auto;
 }
 /*%#+++++ CLASSES +++++++++++#%*/
-.swpc {
-    position: relative;
-    left: 0px;
+.centerify-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
-.wx_pollen {
-    position: relative;
-    left: 0px;
+.centerify-text {
+    text-align: center;
 }
 /*%#+++++ OBJ IDs +++++++++++#%*/
 #column1 {
