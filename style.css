@@ -17,11 +17,13 @@ td img{
     margin-right: auto;
 }
 /*%#+++++ CLASSES +++++++++++#%*/
-.weekly_wx {
-    width: 100%;
+.swpc {
+    position: relative;
+    left: 0px;
 }
-.wiki_motd {
-    height: 590px;
+.wx_pollen {
+    position: relative;
+    left: 0px;
 }
 /*%#+++++ OBJ IDs +++++++++++#%*/
 #column1 {
