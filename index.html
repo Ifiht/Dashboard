@@ -7,13 +7,37 @@
     <link rel="stylesheet" type="text/css" href="./style.css">
     <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <title>Dashboard</title>
+    <script>
+      function startTime() {
+          var today = new Date();
+          var h = today.getHours();
+          var m = today.getMinutes();
+          var s = today.getSeconds();
+          m = checkTime(m);
+          s = checkTime(s);
+          document.getElementById('txt').innerHTML =
+          h + ":" + m + ":" + s;
+          var t = setTimeout(startTime, 500);
+      }
+      function checkTime(i) {
+          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+          return i;
+      }
+      </script>
   </head>
   <body>
     <table>
       <tr>
-        <img class="wx_tod" src="res/swpc-scales.png" alt="screenshot">
-        <img class="wx_tod" src="res/swpc-sum.png" alt="screenshot">
-        <img class="wx_tod" src="res/wx-pollen.png" alt="screenshot">
+        <td>
+          <img class="wx_tod" src="res/swpc-scales.png" alt="screenshot">
+          <img class="wx_tod" src="res/swpc-sum.png" alt="screenshot">
+        </td>
+        <td>
+          <img class="wx_tod" src="res/wx-pollen.png" alt="screenshot">
+        </td>
+        <td>
+          <div id="txt"></div>
+        </td>
       </tr>
       <tr>
         <img class="wx_tod" src="res/wx-summary.png" alt="screenshot">
@@ -23,8 +47,8 @@
       <tr>
         <img class="wiki_motd" src="res/wiki-itn.png" alt="screenshot">
         <img class="wiki_motd" src="res/wiki-otd.png" alt="screenshot">
-        <img class="fin_tod" src="res/buf-indct.png" alt="screenshot">
         <img class="fin_tod" src="res/fin-mkts.png" alt="screenshot">
+        <img class="fin_tod" src="res/buf-indct.png" alt="screenshot">
       </tr>
     </table> 
   </body>
