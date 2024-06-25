@@ -13,11 +13,13 @@ firefox_profile = FirefoxProfile()
 # Configure options
 options = Options()
 options.add_argument("--headless")
+options.add_argument("--width=1280")
+options.add_argument("--height=720")
 options.profile = firefox_profile
 options.add_argument("window-size=1920,1080")
 options.add_argument("user-agent=Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:10.0) Gecko/20100101 Firefox/10.0")
-window_width  = 1920
-window_height = 1080
+window_width  = 1280
+window_height = 720
 
 # Setup firefox driver
 browser = webdriver.Firefox(options=options, executable_path='/usr/local/bin/geckodriver')
