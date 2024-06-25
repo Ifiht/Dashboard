@@ -47,7 +47,7 @@ browser.find_element(By.ID, 'block-swx-noaa-scales-noaascales').screenshot('res/
 browser.find_element(By.ID, 'block-swx-summary-swx-summary').screenshot('res/swpc-sum.png')
 # Financials - WSJ
 browser.get('https://www.wsj.com/market-data')
-time.sleep(1)
+time.sleep(1.5)
 browser.find_element(By.CLASS_NAME, 'WSJTables--table--1QzSOCfq ').screenshot('res/fin-mkts.png')
 
 browser.quit()
